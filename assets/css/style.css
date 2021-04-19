@@ -9,14 +9,38 @@
     
 }
 /* For the image container */
+@keyframes intro-slider {
+    0% {
+        background-image: url(../images/1.jpg);
+    }
+    25% {
+        background-image: url(../images/2.jpg);
+    }
+    50% {
+        background-image: url(../images/3.jpg);
+    }
+    75% {
+        background-image: url(../images/4.jpg);
+    }
+    100% {
+        background-image: url(../images/5.jpg);
+    }
+
+}
+
 #tw-intro .image {
+    overflow: hidden;
+    transition: 0.5s;
     background-color: dodgerblue;
     background-image: url(../images/1.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-blend-mode: overlay;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: intro-slider 10s infinite forwards;
 }
 
 #tw-intro .image svg {
